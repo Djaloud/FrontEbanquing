@@ -1,0 +1,56 @@
+<div class="panel panel-primary pn-marge">
+  <div class="panel-heading"> Listes des clients </div>
+  <div class="panel-body">
+
+    <form>
+
+      <div class="form-row">
+
+        <div class="col-md-4 ">
+          <input type="text" class="form-control" name="nom" required>
+        </div>
+
+        <div class="col-md-4 ">
+          <input type="text" class="form-control" name="nom" required>
+        </div>
+
+        <div class="col-md-4 ">
+          <button class="btn btn-primary " type="submit" name="recherche">Rechercher</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class=" pn-marge">
+    <table *ngIf="clients" class="table table-bordered ">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">login</th>
+        <th scope="col">Telephone</th>
+        <th scope="col">Agence</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+         <tr *ngFor="let p of clients">
+           <td>{{p.id}}</td>
+           <td>{{p.nom}}</td>
+           <td>{{p.prenom}}</td>
+           <td>{{p.email}}</td>
+           <td>{{p.tele}}</td>
+           <td>{{p.login}}</td>
+           <td>{{p.agence.nom}}</td>
+         </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
