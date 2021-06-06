@@ -10,7 +10,7 @@ export class ClientsComponent implements OnInit {
   public clients:any;
   public sze:number=5;
   public Pge:number=0;
-  public totalPage
+
 
   public host:string="http://localhost:8080";
   constructor(private http: HttpClient) { }
