@@ -1,3 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
 .pn-marge{
   margin:10px;
 }
@@ -9,4 +11,19 @@
   margin-top:30px;
   margin-left:42%;
   width:200px;
+}
+table .btn{
+  margin: 2px;
+}
+.border{
+  padding: 10px;
+}
+.btn{
+  margin-right:10px;
+}
+.btn1{
+  margin-right:3px;
+}
+.fa {
+  margin:2px;
 }

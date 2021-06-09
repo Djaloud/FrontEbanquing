@@ -18,6 +18,7 @@ import {DataTablesModule} from 'angular-datatables';
 import { ComptesComponent } from './comptes/comptes.component';
 import { VoirComptesComponent } from './voir-comptes/voir-comptes.component';
 import { VirementsComponent } from './virements/virements.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(fr);
 
@@ -41,7 +42,8 @@ registerLocaleData(fr);
     NzLayoutModule,
     NzMenuModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }],
   bootstrap: [AppComponent]

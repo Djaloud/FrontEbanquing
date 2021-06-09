@@ -1,8 +1,11 @@
 <div class="panel panel-primary pn-marge">
   <div class="panel-heading"> Listes des clients </div>
   <div class="panel-body">
+    <!--<div class="border">
+      <button class="btn btn-md btn-outline-primary">
+        <i class="fa fa-user"></i>Nouveau client</button>
+    </div>--->
 
-    
   </div>
 
   <div class=" pn-marge">
@@ -16,6 +19,8 @@
         <th scope="col">login</th>
         <th scope="col">Telephone</th>
         <th scope="col">Agence</th>
+        <th scope="col">Action</th>
+
 
       </tr>
       </thead>
@@ -29,6 +34,12 @@
            <td>{{p.tele}}</td>
            <td>{{p.login}}</td>
            <td>{{p.agence.nom}}</td>
+           <td>
+             <button class="btn1 btn-sm btn-warning">
+               <i class="fa fa-edit"></i></button>
+             <button class="btn1 btn-sm btn-danger">
+               <i class="fa fa-remove"></i></button>
+           </td>
          </tr>
       </tbody>
 
