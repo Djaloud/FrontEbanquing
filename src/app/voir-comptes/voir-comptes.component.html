@@ -1,0 +1,40 @@
+<div class="panel panel-primary pn-marge">
+  <div class="panel-heading"> Listes des comptes </div>
+  <div class="panel-body">
+
+
+  </div>
+
+  <div class=" pn-marge">
+    <table *ngIf="clients" class="table table-bordered table-sm row-border hover" id="datatableexample" >
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">RIB</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Date de creation</th>
+        <th scope="col">Solde</th>
+        <th scope="col">Etat</th>
+        <th scope="col">Type</th>
+        <th scope="col">Agence</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let p of clients">
+        <td>{{p.id}}</td>
+        <td>{{p.nom}}</td>
+        <td>{{p.prenom}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.tele}}</td>
+        <td>{{p.login}}</td>
+        <td>{{p.agence.nom}}</td>
+      </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
