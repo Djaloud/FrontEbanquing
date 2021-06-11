@@ -1,0 +1,54 @@
+<div class="panel panel-primary pn-marge">
+  <div class="panel-heading">Creer un nouveau compte</div>
+  <div class="panel-body">
+    <form>
+      <div class="form-row">
+
+        <div class="col-md-6 form-ro">
+          <label >RIB</label>
+          <input type="text" class="form-control" name="rib" required>
+        </div>
+
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-6 form-ro">
+          <label >Montant</label>
+          <input type="text" class="form-control" name="montant" required>
+        </div>
+
+        <div class="col-md-12 form-ro">
+          <label >Date</label>
+          <input type="date" class="form-control" name="date" required>
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+        <div class="col-md-12 form-ro">
+          <label >Agent</label>
+          <select class="form-control" name="id_agent"  required ngModel>
+            <optgroup *ngFor="let p of agent">
+              <option value="{{p.id}}">{{p.nom}}</option>
+            </optgroup>
+          </select>
+
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary my-btn" type="submit" name="Ajouter">Ajouter</button>
+
+    </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+

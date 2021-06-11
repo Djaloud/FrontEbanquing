@@ -15,6 +15,10 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { ClientsComponent } from './clients/clients.component';
 import {DataTablesModule} from 'angular-datatables';
+import { ComptesComponent } from './comptes/comptes.component';
+import { VoirComptesComponent } from './voir-comptes/voir-comptes.component';
+import { VirementsComponent } from './virements/virements.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(fr);
 
@@ -22,7 +26,11 @@ registerLocaleData(fr);
   declarations: [
     AppComponent,
     ClientsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ComptesComponent,
+    VoirComptesComponent,
+    VirementsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,9 @@ registerLocaleData(fr);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }],
   bootstrap: [AppComponent]

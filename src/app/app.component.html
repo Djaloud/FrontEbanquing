@@ -27,14 +27,26 @@
         </ul>
       </li>
 
-      <li nz-submenu nzOpen nzTitle="Gestions Enrolements" nzIcon="form">
+      <li nz-submenu nzOpen nzTitle="Gestion des virements" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>Enroler Clients</a>
+            <a routerLink="/virements">effectuer un virement</a>
           </li>
         </ul>
       </li>
 
+      <li nz-submenu nzOpen nzTitle="Gestion des Comptes" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/comptes">Nouvel compte</a>
+          </li>
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/voirComptes">Comptes</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nz-sider>
 
