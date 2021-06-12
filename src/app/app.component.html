@@ -7,9 +7,9 @@
             [nzTrigger]="null">
     <div class="sidebar-logo">
       <a routerLink="/welcome">
-
-        <h1>ESPACE BANQUIER</h1>
+        <h1>BMCE BANQUIER</h1>
       </a>
+
     </div>
     <ul  nz-menu  nzMode="inline" [nzInlineCollapsed]="isCollapsed">
 
@@ -21,28 +21,14 @@
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/clients">Mes clients</a>
           </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Clients Suspendu(es)</a>
-          </li>
+
         </ul>
       </li>
 
-      <li nz-submenu nzOpen nzTitle="Gestion des virements" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/virements">effectuer un virement</a>
-          </li>
-        </ul>
-      </li>
 
       <li nz-submenu nzOpen nzTitle="Gestion des Comptes" nzIcon="dashboard">
         <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/comptes">Nouvel compte</a>
-          </li>
-
-
-          <li nz-menu-item nzMatchRouter>
+            <li nz-menu-item nzMatchRouter>
             <a routerLink="/voirComptes">Comptes</a>
           </li>
         </ul>
@@ -63,11 +49,11 @@
       </div>
     </nz-header>
 
-   <nz-content>
+
       <div class="inner-content">
             <router-outlet></router-outlet>
       </div>
-    </nz-content>
+
 
 
 

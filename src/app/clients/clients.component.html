@@ -1,13 +1,7 @@
-<div class="panel panel-primary">
-
-    <!--<div class="border">
-      <button class="btn btn-md btn-outline-primary">
-        <i class="fa fa-user"></i>Nouveau client</button>
-    </div>--->
-
+<div class="panel panel-info ">
   <div class=" pn-marge">
 
-    <table *ngIf="clients" class="table table-bordered table-sm row-border hover" id="datatableexample" >
+    <table class="table table-bordered table-striped table-sm row-border hover" id="datatableexample" >
       <thead>
       <tr>
         <th scope="col">#</th>
@@ -21,14 +15,14 @@
       </tr>
       </thead>
 
-      <tbody>
+      <tbody *ngIf="clients" >
          <tr *ngFor="let p of clients">
            <td>{{p.id}}</td>
            <td>{{p.nom}}</td>
            <td>{{p.prenom}}</td>
            <td>{{p.email}}</td>
-           <td>{{p.tele}}</td>
            <td>{{p.login}}</td>
+           <td>{{p.tele}}</td>
            <td>{{p.agence.nom}}</td>
            <td>
              <button class="btn1 btn-sm btn btn-info" data-toggle="modal" data-target="#myModal" (click)="open(p)">

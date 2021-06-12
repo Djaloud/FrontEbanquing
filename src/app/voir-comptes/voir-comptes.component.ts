@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-voir-comptes',
@@ -12,8 +13,8 @@ export class VoirComptesComponent implements OnInit {
   public agent:any;
   public rib:any;
   public name:any;
-  public host:string="http://localhost:8080/api/v1/compte";
-  constructor(private http: HttpClient) { }
+  public host:string="http://192.168.1.4:999/api/v1/compte";
+  constructor(private http: HttpClient,private route:Router) { }
   dtOptions: any = {};
 
   ngOnInit(): void {
@@ -37,9 +38,9 @@ export class VoirComptesComponent implements OnInit {
          this.name=p.nom;
       }
   OnVirement(p:any){
-     this.http.post("http://localhost:8080/api/v1/compte/update",p)
+     this.http.put("http://192.168.1.4:999/api/v1/compte/update/"+p.rib+"/"+p.montant,p)
                                       .subscribe(res=>{
-                                      console.log(res);
+                                      this.route.navigateByUrl("/voirComptes");
                                       },err=>{
                                       console.log(err);
                                       })
@@ -47,7 +48,7 @@ export class VoirComptesComponent implements OnInit {
   }
 
   OnAgent(): void {
-      this.http.get("http://localhost:8080/api/v1/agent/all")
+      this.http.get("http://192.168.1.4:999/api/v1/agent/all")
                                    .subscribe(res=>{
                                      this.agent=res;
                                    },err=>{

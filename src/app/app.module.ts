@@ -35,7 +35,6 @@ registerLocaleData(fr);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
